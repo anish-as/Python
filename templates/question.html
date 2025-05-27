@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Question {{ current_question }}</title>
+</head>
+<body>
+    <h1>Question {{ current_question }}</h1>
+    <p>{{ question['question'] }}</p>
+    <form action="{{ url_for('answer') }}" method="post">
+        <input type="radio" name="option" value="1" required> {{ question['option1'] }}<br>
+        <input type="radio" name="option" value="2"> {{ question['option2'] }}<br>
+        <input type="radio" name="option" value="3"> {{ question['option3'] }}<br>
+        <input type="radio" name="option" value="4"> {{ question['option4'] }}<br>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>
